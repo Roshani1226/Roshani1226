@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Haven</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <header>
+    <div class="brand">BOOK <span>HAVEN</span></div>
+
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle">
+        ◐ <span class="theme-text">Theme</span>
+      </button>
+
+      <button class="icon-button" id="cartButton">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p>DISCOVER YOUR NEXT READ</p>
+        <h1>Find a story that stays with you.</h1>
+        <p>
+          Explore handpicked classics and modern favorites.
+          Save books you love and keep your cart between visits.
+        </p>
+        <a class="primary" href="#catalog">Browse catalogue</a>
+      </div>
+
+      <div class="hero-art">📚</div>
+    </section>
+
+    <section id="catalog">
+      <h2>Discover books</h2>
+      <p>Search, filter and sort the catalogue.</p>
+
+      <div class="toolbar">
+        <input
+          class="field"
+          id="search"
+          type="search"
+          placeholder="Search by title or author"
+        />
+
+        <select class="field" id="genre">
+          <option value="all">All genres</option>
+        </select>
+
+        <select class="field" id="sort">
+          <option value="featured">Sort: Featured</option>
+          <option value="year-desc">Newest first</option>
+          <option value="year-asc">Oldest first</option>
+          <option value="title">Title A-Z</option>
+        </select>
+      </div>
+
+      <p class="results" id="results"></p>
+      <div class="book-grid" id="bookGrid"></div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefit">
+        <strong>⚡ Instant discovery</strong>
+        <p>Search and filter books without reloading the page.</p>
+      </div>
+
+      <div class="benefit">
+        <strong>♡ Personal wishlist</strong>
+        <p>Your saved books remain stored in the browser.</p>
+      </div>
+
+      <div class="benefit">
+        <strong>🔒 Cart system</strong>
+        <p>Add, remove, and manage books in your cart.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Book Haven · HTML · CSS · JavaScript</footer>
+
+  <dialog id="detailsDialog">
+    <div class="modal-header">
+      <strong>Book details</strong>
+      <button class="close" type="button" data-close>×</button>
+    </div>
+
+    <div class="modal-body" id="detailsContent"></div>
+  </dialog>
+
+  <dialog id="cartDialog">
+    <div class="modal-header">
+      <strong>Your cart</strong>
+      <button class="close" type="button" data-close>×</button>
+    </div>
+
+    <div class="modal-body" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <span id="cartTotal">Total: $0.00</span>
+      <button class="primary" type="button" id="checkout">
+        Demo checkout
+      </button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
